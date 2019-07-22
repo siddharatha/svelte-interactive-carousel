@@ -13,7 +13,7 @@
   let leftlist = [];
   let centerlist = [];
 
-  function moveRight() {
+  export function moveRight() {
     if (visibleindex < items.length - 1) {
       visibleindex++;
       leftlist = centerlist;
@@ -21,7 +21,7 @@
     }
   }
 
-  function moveLeft() {
+  export function moveLeft() {
     if (visibleindex < items.length && visibleindex > 0) {
       visibleindex--;
       centerlist = [items[visibleindex]];

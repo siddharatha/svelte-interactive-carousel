@@ -15,8 +15,15 @@
     "svelte": "^3.6.7"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "carousel",
+    "interactive"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siddharatha/svelte-interactive-carousel.git"
+  },
+  "license": "MIT",
   "files": [
     "src",
     "index.mjs",
