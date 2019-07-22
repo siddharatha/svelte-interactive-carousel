@@ -56,7 +56,7 @@
   beforeUpdate(() => {
     console.log([items[visibleindex]], centerlist);
     if (visibleindex < 0) visibleindex = 0;
-    if ((visibleindex = items.length)) visibleindex = items.length - 1;
+    if (visibleindex === items.length) visibleindex = items.length - 1;
     if (visibleindex === 0) {
       centerlist = [items[visibleindex]];
       leftlist = [];

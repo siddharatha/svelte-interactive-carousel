@@ -1,30 +1,36 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
+WIP
 
----
-
-# component-template
-
-A base for building shareable Svelte components. Clone it with [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/component-template my-new-component
-cd my-new-component
-npm install # or yarn
-```
-
-Your component's source code lives in `src/index.html`.
+- This is a work in progress , inspired by need to have an interactive carousel with more than one visible section within the window.
+- Also to have buttons which provide options within the carousel to move back and forth or to index
 
 TODO
 
-* [ ] some firm opinions about the best way to test components
-* [ ] update `degit` so that it automates some of the setup work
-
+- [ ] Update documentation with clear examples
+- [ ] write tests
 
 ## Setting up
 
-* Run `npm init` (or `yarn init`)
-* Replace this README with your own
+```
+npm i @siddharatha/svelte-interactive-carousel
+```
 
+```html
+<script>
+  import { data } from "./data.js";
+  import Carousel from "svelte-interactive-carousel";
+  import CarouselItem from "./CarouselItem.svelte";
+  import Paginator from "./Paginator.svelte";
+
+  export let visibleindex = 0;
+  let carousel;
+</script>
+
+<Carousel items="{data}" let:blah bind:visibleindex bind:this="{carousel}">
+  <CarouselItem {...blah} />
+</Carousel>
+<button on:click="{carousel.moveLeft}">&lt-</button>
+<button on:click="{carousel.moveRight}">-&gt</button>
+```
 
 ## Consuming components
 
